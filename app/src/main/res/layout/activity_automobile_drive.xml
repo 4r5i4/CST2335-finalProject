@@ -34,7 +34,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="80sp"
             android:gravity="bottom"
-            android:textSize="30sp"/>
+            android:textSize="20sp"
+             android:textStyle="bold"/>
     </LinearLayout>
 
     <ToggleButton
@@ -45,7 +46,8 @@
         android:layout_gravity="center_vertical|center_horizontal"
         android:textOn="@string/a_text_stop"
         android:textOff="@string/a_text_driving"
-        android:textSize="30sp"
+        android:textSize="20sp"
+             android:textStyle="bold"
         android:layout_marginTop="50sp"/>
 
     <ImageView
@@ -63,7 +65,8 @@
         android:id="@+id/a_drive_text_oil"
         android:layout_gravity="right"
         android:layout_marginRight="20sp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+             android:textStyle="bold"/>
 
 
 </LinearLayout>

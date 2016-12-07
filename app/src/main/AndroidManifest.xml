@@ -52,6 +52,22 @@
             android:name=".AutomobileDrive"
             android:label="Drive"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--The Kitchen is an empty activity with no bar or fab -->
+        <activity
+            android:name=".Kitchen"
+            android:configChanges="orientation|screenSize"
+            android:largeHeap="true">
+
+        </activity>
     </application>
 
 </manifest>
+        <!--<activity-->
+        <!--android:name=".Kitchen"-->
+        <!--android:configChanges="orientation|screenSize"-->
+        <!--android:label="Control you kitchen "-->
+        <!--android:theme="@style/Theme.AppCompat.Light.DarkActionBar"-->
+        <!--android:largeHeap="true">-->
+        <!---->
+        <!--</activity>-->

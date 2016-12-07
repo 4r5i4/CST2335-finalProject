@@ -1,0 +1,274 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kitchen_main_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context="com.example.cst2335.finalproject.KitchenMainFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeambiance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--ambiance-->
+        <ImageView
+            android:id="@+id/ambient_setting_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:alpha="0.8"
+            android:onClick="ambientHandler"
+            android:scaleType="centerCrop"
+            android:soundEffectsEnabled="true"
+            android:tint="@color/black_overlay"
+            app:srcCompat="@drawable/modernkitchen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ambient_setting_ImageView"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Ambiance\nSettings"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearapplianceandgrocery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeambiance">
+        <!--appliance -->
+        <RelativeLayout
+            android:id="@+id/relativeappliance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/appliance_setting_image"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:alpha="0.8"
+                android:onClick="applianceHandler"
+                android:scaleType="centerCrop"
+                android:soundEffectsEnabled="true"
+                android:tint="@color/black_overlay"
+                app:srcCompat="@drawable/smartkitchen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/appliance_setting_image"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Appliance\nSettings"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <!--grocery list-->
+        <RelativeLayout
+            android:id="@+id/relativegrocery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/grocery_list_image"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.8"
+                android:onClick="groceryHandler"
+                android:scaleType="centerCrop"
+                android:soundEffectsEnabled="true"
+                android:tint="@color/black_overlay"
+                app:srcCompat="@drawable/grocery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/grocery_list_image"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Grocery\nList"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear911anddineout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearapplianceandgrocery">
+        <!--emergency-->
+        <RelativeLayout
+            android:id="@+id/relativeemergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/linearapplianceandgrocery"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0">
+
+            <ImageView
+                android:id="@+id/emergencyImageView"
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:onClick="emergencyHandler"
+                android:scaleType="centerCrop"
+                android:soundEffectsEnabled="true"
+                app:srcCompat="@drawable/redsquare" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/emergencyImageView"
+                android:layout_alignEnd="@id/emergencyImageView"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Call\n911"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <!--dine out-->
+        <RelativeLayout
+            android:id="@+id/relativedineout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/dineOutImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.8"
+                android:onClick="dineOutHandler"
+                android:scaleType="centerCrop"
+                android:soundEffectsEnabled="true"
+                android:tint="@color/black_overlay"
+                app:srcCompat="@drawable/dineoutpicture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/dineOutImageView"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+
+                android:text="Dine Out\ninstead"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!--TODO add the "User Settings"-->
+    <!--TODO add the "Add Applicances-->
+    <LinearLayout
+        android:id="@+id/linearusersettingandaddappliance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear911anddineout"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeusersettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <!--user settings-->
+            <ImageView
+                android:id="@+id/user_setting_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:alpha="0.8"
+                android:onClick="userSettingHandler"
+                android:scaleType="centerCrop"
+                android:soundEffectsEnabled="true"
+                android:tint="@color/black_overlay"
+                app:srcCompat="@drawable/happyfamily" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/user_setting_imageView"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+
+                android:text="User\nSettings"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <!--add appliance-->
+        <RelativeLayout
+            android:id="@+id/relativeaddappliance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2">
+            <!--todo: check weight-->
+
+            <ImageView
+                android:id="@+id/addapplianceImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:alpha="0.8"
+                android:onClick="newApplianceHandler"
+                android:scaleType="centerCrop"
+                android:soundEffectsEnabled="true"
+                android:tint="@color/black_overlay"
+                app:srcCompat="@drawable/gift_wrap_box" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/addapplianceImageView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Add\nNew\nAppliances"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
