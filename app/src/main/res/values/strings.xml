@@ -25,5 +25,6 @@
     <string name="a_text_fm">FM</string>
     <string name="a_text_front">Front</string>
     <string name="a_text_back">Back</string>
+    <string name="title_activity_kitchen">Kitchen</string>
 
 </resources>

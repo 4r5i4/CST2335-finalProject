@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".LivingRoom" />
-        <activity android:name=".Kitchen" />
         <activity android:name=".House" />
         <activity android:name=".Automobile" />
         <activity
@@ -32,27 +31,27 @@
         <activity
             android:name=".AutomobileTemp"
             android:label="Temperature Setting"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AutomobileFuel"
             android:label="Fuel Level"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AutomobileRadio"
             android:label="Radio Control"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AutomobileLight"
             android:label="Lights"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AutomobileOdometer"
             android:label="Odometer"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AutomobileDrive"
             android:label="Drive"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
