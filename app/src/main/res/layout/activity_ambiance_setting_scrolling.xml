@@ -39,10 +39,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end"
         app:srcCompat="@drawable/home_icon"
-        app:fabSize="mini"
-        app:elevation="13dp" />
+        app:elevation="20dp"
+        app:layout_anchorGravity="center_vertical|right"
+        android:layout_gravity="bottom|right" />
 
 </android.support.design.widget.CoordinatorLayout>
+
+
+
+

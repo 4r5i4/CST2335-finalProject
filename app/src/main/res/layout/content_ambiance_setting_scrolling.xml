@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -35,7 +35,9 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:elevation="16dp"
+                    android:orientation="vertical"
+                    android:text="Temperature">
 
 
                     <TextView
@@ -49,7 +51,7 @@
 
                     <ToggleButton
                         android:id="@+id/KitchenThemostatToggleButton"
-                        style="@android:style/Widget.Button.Toggle"
+                        style="@android:style/Widget.Holo.Button.Toggle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="ToggleButton" />
@@ -66,29 +68,30 @@
                         style="@android:style/Widget.Holo.SeekBar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:max="100"
+                        android:max="50"
                         android:progress="25" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp">
 
                         <TextView
                             android:id="@+id/TemperatureTextview"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:text="" />
+                            android:text=""
+                            android:textSize="35sp" />
 
                         <TextView
                             android:id="@+id/CelciusTextview"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:text=" °C" />
-                    </LinearLayout>
+                            android:layout_toRightOf="@id/TemperatureTextview"
+                            android:text=" °C"
+                            android:textSize="35sp" />
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -96,66 +99,101 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:text="Lighting">
 
                     <TextView
-                        android:id="@+id/toggleLightTextview"
+                        android:id="@+id/KitchenLightsToggleTextview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Lights switch" />
+
 
                     <ToggleButton
-                        android:id="@+id/toggleButton"
-                        style="@android:style/Widget.Button.Toggle"
+                        android:id="@+id/KitchenLightsToggleButton"
+                        style="@android:style/Widget.Holo.Button.Toggle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="ToggleButton" />
 
                     <TextView
-                        android:id="@+id/seekbarTextview"
+                        android:id="@+id/KitchenLightsTextview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:layout_marginTop="30dp"
+                        android:text="Light Dimmer" />
 
                     <SeekBar
-                        android:id="@+id/seekBar2"
+                        android:id="@+id/KitchenLightsToggleSeekbar"
                         style="@android:style/Widget.Holo.SeekBar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:max="100"
+                        android:max="50"
                         android:progress="25" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/lightPercentageTextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="35sp" />
+
+                        <TextView
+                            android:id="@+id/percentageTextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/lightPercentageTextview"
+                            android:text=" %"
+                            android:textSize="35sp" />
+                    </RelativeLayout>
+
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/TurnOnSpeakersTextview"
+                        android:id="@+id/kitchenSpeakersToggleTextview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Speakers Switch" />
+
 
                     <ToggleButton
-                        android:id="@+id/TurnOnSpeakersToggleButton"
-                        style="@android:style/Widget.Button.Toggle"
+                        android:id="@+id/KitchenSpeakersToggleButton"
+                        style="@android:style/Widget.Holo.Button.Toggle"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="ToggleButton" />
+                        android:layout_height="wrap_content" />
 
                     <!--connecting to speakers-->
-                    <ProgressBar
-                        android:id="@+id/progressBar"
-                        style="@android:style/Widget.Material.Light.ProgressBar.Large"
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:indeterminate="false"
-                        android:progress="@android:integer/config_longAnimTime"
-                        android:visibility="visible"
-                        tools:visibility="visible" />
+                        android:layout_marginTop="30dp">
+
+                        <ImageView
+                            android:id="@+id/speakers"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/speakers" />
+                    </RelativeLayout>
 
 
                 </LinearLayout>
@@ -163,4 +201,4 @@
         </LinearLayout>
     </TabHost>
 
-</LinearLayout>
+</ScrollView>
