@@ -66,17 +66,56 @@
         <!-- The Kitchen is an empty activity with no bar or fab -->
         <activity
             android:name=".Kitchen"
+            android:allowBackup="true"
             android:configChanges="orientation|screenSize"
-            android:largeHeap="true" />
+            android:hardwareAccelerated="true"
+            android:largeHeap="true"
+            android:supportsRtl="true" />
         <activity
             android:name=".AmbianceSettingScrollingActivity"
             android:label="Ambiance"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName=".Kitchen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cst2335.finalproject.Kitchen" />
         </activity>
+        <activity
+            android:name=".GroceryListActivity"
+            android:label="Grocery List"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".Kitchen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cst2335.finalproject.Kitchen" />
+        </activity>
+
+
+        <activity
+            android:name=".GroceryDetailActivity"
+            android:label="Grocery Detail"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".GroceryListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cst2335.finalproject.GroceryDetailActivity" />
+        </activity>
+
+
+        <activity
+            android:name=".DineOutActivity"
+            android:label="Dine Out"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".Kitchen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cst2335.finalproject.DineOutActivity" />
+        </activity>
+
     </application>
 
 </manifest>

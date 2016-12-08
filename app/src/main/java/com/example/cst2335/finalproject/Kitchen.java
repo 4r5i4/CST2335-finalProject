@@ -26,12 +26,10 @@ public class Kitchen extends AppCompatActivity {
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-                transaction
+        transaction
                 .add(R.id.fragment_container, ambient_fragment, "AMBIENT_FRAGMENT")
                 .commit();
     }
-
-
 
 
     public void ambientHandler(View view) {
@@ -39,35 +37,36 @@ public class Kitchen extends AppCompatActivity {
         startActivity(ambientSettingIntent);
     }
 
-    public void applianceHandler(View view) {
-        Intent ambientSettingIntent = new Intent(this, ApplianceActivity.class);
-        startActivity(ambientSettingIntent);
-    }
-
-    public void groceryHandler(View view) {
-        Intent ambientSettingIntent = new Intent(this, GroceryActivity.class);
-        startActivity(ambientSettingIntent);
-    }
-
     public void emergencyHandler(View view) {
-        String uri = "tel:" + emergency.trim() ;
+        String uri = "tel:" + emergency.trim();
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse(uri));
         startActivity(intent);
     }
 
-    public void dineOutHandler(View view) {
-        Intent ambientSettingIntent = new Intent(this, DineOutActivity.class);
+    public void applianceHandler(View view) {
+//        Intent ambientSettingIntent = new Intent(this, ApplianceActivity.class);
+//        startActivity(ambientSettingIntent);
+    }
+
+    public void groceryHandler(View view) {
+        Intent ambientSettingIntent = new Intent(this, GroceryListActivity.class);
         startActivity(ambientSettingIntent);
     }
 
+    public void dineOutHandler(View view) {
+        Intent dineoutIntent = new Intent(this, DineOutActivity.class);
+        startActivity(dineoutIntent);
+    }
+
+
     public void userSettingHandler(View view) {
-        Intent ambientSettingIntent = new Intent(this, UserSettingActivity.class);
-        startActivity(ambientSettingIntent);
+//        Intent ambientSettingIntent = new Intent(this, UserSettingActivity.class);
+//        startActivity(ambientSettingIntent);
     }
 
     public void newApplianceHandler(View view) {
-        Intent ambientSettingIntent = new Intent(this, NewApplianceActivity.class);
-        startActivity(ambientSettingIntent);
+//        Intent ambientSettingIntent = new Intent(this, NewApplianceActivity.class);
+//        startActivity(ambientSettingIntent);
     }
 }

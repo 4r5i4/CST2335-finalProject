@@ -168,7 +168,7 @@
                 android:scaleType="centerCrop"
                 android:soundEffectsEnabled="true"
                 android:tint="@color/black_overlay"
-                app:srcCompat="@drawable/dineoutpicture" />
+                app:srcCompat="@drawable/diningout" />
 
             <TextView
                 android:layout_width="wrap_content"

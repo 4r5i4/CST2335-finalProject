@@ -127,5 +127,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="title_grocery_list">Groceries</string>
+    <string name="title_grocery_detail">Grocery Detail</string>
+    <string name="title_activity_grocery_list">GroceryListActivity</string>
 
 </resources>
