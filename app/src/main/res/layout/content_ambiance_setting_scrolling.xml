@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.cst2335.finalproject.AmbianceSettingScrollingActivity"
+    tools:showIn="@layout/activity_ambiance_setting_scrolling">
+
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/KitchenThermostatTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Thermostat switch" />
+
+
+                    <ToggleButton
+                        android:id="@+id/KitchenThemostatToggleButton"
+                        style="@android:style/Widget.Button.Toggle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ToggleButton" />
+
+                    <TextView
+                        android:id="@+id/KickenThermostatTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Temperature Settings" />
+
+                    <SeekBar
+                        android:id="@+id/KickenThermostatSeekbar"
+                        style="@android:style/Widget.Holo.SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:progress="25" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/TemperatureTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/CelciusTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:text=" °C" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/toggleLightTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton"
+                        style="@android:style/Widget.Button.Toggle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ToggleButton" />
+
+                    <TextView
+                        android:id="@+id/seekbarTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar2"
+                        style="@android:style/Widget.Holo.SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:progress="25" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TurnOnSpeakersTextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <ToggleButton
+                        android:id="@+id/TurnOnSpeakersToggleButton"
+                        style="@android:style/Widget.Button.Toggle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ToggleButton" />
+
+                    <!--connecting to speakers-->
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@android:style/Widget.Material.Light.ProgressBar.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:progress="@android:integer/config_longAnimTime"
+                        android:visibility="visible"
+                        tools:visibility="visible" />
+
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

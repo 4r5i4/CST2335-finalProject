@@ -1,5 +1,6 @@
 package com.example.cst2335.finalproject;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,8 @@ public class Kitchen extends AppCompatActivity {
 
 
     public void ambientHandler(View view) {
+        Intent ambientSettingIntent = new Intent(this, AmbianceSettingScrollingActivity.class);
+        startActivity(ambientSettingIntent);
     }
 
     public void applianceHandler(View view) {

@@ -53,21 +53,21 @@
             android:label="Drive"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <!--The Kitchen is an empty activity with no bar or fab -->
+        <!-- The Kitchen is an empty activity with no bar or fab -->
         <activity
             android:name=".Kitchen"
             android:configChanges="orientation|screenSize"
             android:largeHeap="true">
-
+        </activity>
+        <activity
+            android:name=".AmbianceSettingScrollingActivity"
+            android:label="Ambiance Setting"
+            android:parentActivityName=".Kitchen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cst2335.finalproject.Kitchen" />
         </activity>
     </application>
 
 </manifest>
-        <!--<activity-->
-        <!--android:name=".Kitchen"-->
-        <!--android:configChanges="orientation|screenSize"-->
-        <!--android:label="Control you kitchen "-->
-        <!--android:theme="@style/Theme.AppCompat.Light.DarkActionBar"-->
-        <!--android:largeHeap="true">-->
-        <!---->
-        <!--</activity>-->
